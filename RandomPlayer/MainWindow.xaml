@@ -1,0 +1,6 @@
+﻿<Window x:Class="RandomPlayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Destursoft Random Player" Height="350" Width="525" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" PreviewMouseDoubleClick="Window_PreviewMouseDoubleClick" PreviewKeyDown="Window_PreviewKeyDown" Icon="/RandomPlayer;component/Movie.ico">
+    <Frame Name="frm" NavigationUIVisibility="Hidden" />
+</Window>

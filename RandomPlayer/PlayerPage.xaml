@@ -1,0 +1,27 @@
+﻿<Page x:Class="RandomPlayer.PlayerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+	Title="PlayerPage" Background="Black" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
+
+    <Grid>
+        <Menu Height="23" Name="menu" VerticalAlignment="Top" Background="Black" Foreground="Lime">
+            <MenuItem Header="Settings" Click="miSettings_Click" />
+            <MenuItem Header="Random" Click="miRandom_Click" />
+            <MenuItem Header="History" Name="miHistory">
+                <MenuItem.ItemContainerStyle>
+                    <Style>
+                        <Setter Property="Grid.Background" Value="Black" />
+                    </Style>
+                </MenuItem.ItemContainerStyle>
+            </MenuItem>
+            <MenuItem Header="Lock" Click="miLock_Click" />
+        </Menu>
+        <MediaElement Name="me" LoadedBehavior="Manual" MediaOpened="me_MediaOpened" Margin="0,24,0,0" />
+        <Slider Name="sld" PreviewMouseDown="sld_PreviewMouseDown" PreviewMouseUp="sld_PreviewMouseUp" IsMoveToPointEnabled="True" VerticalAlignment="Bottom" />
+        <TextBlock Name="tbkInfo" Foreground="Red" TextAlignment="Right" VerticalAlignment="Top" Height="23" HorizontalAlignment="Right" Margin="0,3,5,0" />
+    </Grid>
+</Page>
